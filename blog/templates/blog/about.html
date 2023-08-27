@@ -1,0 +1,28 @@
+<!--Нужно сказать что мы будем наследовать всё из файла base.html
+находимся в папке templates-->
+{% extends 'blog/base.html' %}
+
+<!--Говорим в какие части будем вставлять данные-->
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+{% endblock %}
+
+{% block aside %}
+    <h4 class="mt-2">Интересные статьи</h4>
+    <img src="https://itproger.com/img/news/1591879929.jpg" class="img-thumbnail">
+    <p>Уже не первый год слышно много положительных отзывов про движок Godot. Пришло время узнать побольше об этом движке и выяснить почему он столь популярен.</p>
+
+    <a href="https://itproger.com/news/285" target="_blank">
+        <button class="btn btn-warning">Посмотреть</button>
+    </a>
+
+    <img src="https://itproger.com/img/news/x1692885987.jpg.pagespeed.ic.uTfxIeI2Mv.webp" class="img-thumbnail mt-4">
+    <p>Unity является очень популярным game-движком. На нем создано колоссальное количество проектов. Сегодня мы хотим поговорить именно о ТОПе игр за 2023 год, которые были созданы на Unity.</p>
+    <a href="https://itproger.com/news/unity-engine-luchshie-igri-za-2023-god" target="_blank">
+        <button class="btn btn-warning">Посмотреть</button>
+    </a>
+{% endblock %}
