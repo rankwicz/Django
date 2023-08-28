@@ -8,12 +8,13 @@
 {% endblock %}
 
 {% block content %}
+    
     <!--переберём список статей с помощью цикла-->
     {% for post in news%} <!--for "любое название" in news-->
         <div class="alert alert-light">
             <h1>{{ post.title }}</h1>
         <p>{{ post.text }}</p>
-        <span class="text-muted">Публикация: {{ post.date }}</span>
+        <span class="text-muted">Публикация: {{ post.date|date:"j F Y" }}</span>
         {% if post.autor %}
             <p><b>Автор:</b> <mark>{{ post.autor}}</mark> </p>
         {% else %}
